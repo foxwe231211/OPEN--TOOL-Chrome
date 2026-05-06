@@ -9,9 +9,36 @@ body {
 .topbar {
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(90deg,#00c853,#00e676);
   color: black;
+
+  background: linear-gradient(120deg, #8ff0b7, #08be66, #0b8d41);
+  background-size: 200% 200%;
+
+  animation: gradientMove 10s ease infinite;
+
+  position: relative;
+  z-index: 1;
+
 }
+
+
+
+
+
+
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+
+
+
 
 .topbar h1 {
   margin: 0;
@@ -58,4 +85,138 @@ button {
 
 button:hover {
   background: #00c853;
+}
+
+
+
+
+
+.creator-btn4 {
+  position: fixed;        /* 👈 يخليه ثابت */
+  bottom: 20px;           /* 👈 من تحت */
+  right: 20px;            /* 👈 من اليمين */
+
+  padding: 15px 25px;
+  border-radius: 50px;    /* 👈 شكل دائري ناعم */
+  border: none;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  background: linear-gradient(135deg,#2208b1,#2a3bcf);
+  color: white;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3); /* 👈 ظل احترافي */
+  transition: all 0.3s ease;
+
+  z-index: 999; /* 👈 يفضل فوق كل حاجة */
+}
+
+/* hover */
+.creator-btn4:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* عند الضغط */
+.creator-btn4:active {
+  transform: scale(0.95);
+}
+
+
+
+
+.creator-btn2 {
+  padding: 15px 39px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: bold;
+
+
+  background: linear-gradient(90deg, #eeb059, #ff9b05);
+  color: black;
+
+  transition: 0.3s;
+}
+
+
+button.creator-btn2:hover {
+  background: linear-gradient(90deg, #ffa726, #ffb74d) !important;
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(233, 146, 6, 0.849);
+}
+
+
+
+
+
+
+
+
+.creator-btn5 {
+  display: block;      /* ليقبل خاصية الـ margin */
+  margin: 20px auto;   /* auto تقوم بتوسيطه أفقياً */
+  
+  /* باقي الكود الخاص بك */
+  padding: 15px 39px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;   
+  font-weight: bold; 
+  background: linear-gradient(90deg,#0790b3,#0789c5);
+  color: white;
+  transition: 0.3s;
+}
+
+button.creator-btn5:hover {
+  background: linear-gradient(90deg, #07f7eb, #42bfcf) !important;
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(233, 146, 6, 0.849);
+}
+
+
+
+
+.card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+  
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%; 
+}
+
+
+.card img {
+  width: 100%;
+  height: 200px;       
+  object-fit: cover;  
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  min-height: 50px;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 🔥 منع تأثير الزر العام على creator-btn2 */
+.creator-btn2:hover {
+  background: linear-gradient(90deg,#b97c0a,#c59907) !important;
 }
